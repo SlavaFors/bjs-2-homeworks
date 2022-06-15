@@ -1,20 +1,18 @@
 'use strict';
 
 function solveEquation(a, b, c) {
-  let arr = [];
-  let discriminant = b**2 - 4 * a * c;
-  let discriminantRoot1;
-  let discriminantRoot2;
+  const arr = [];
+  const discriminant = b**2 - 4 * a * c;
+  //let discriminantRoot1;
+ // let discriminantRoot2;
 
-  if (discriminant < 0) {
-  	let arr = [];
-  } else if (discriminant > 0) {
-  	discriminantRoot1 = (-b + Math.sqrt(discriminant) ) / (2 * a);
-    discriminantRoot2 = (-b - Math.sqrt(discriminant) ) / (2 * a);
-    arr.push(discriminantRoot1, discriminantRoot2);
+  if (discriminant > 0) {
+  //	discriminantRoot1 = (-b + Math.sqrt(discriminant) ) / (2 * a);
+  //  discriminantRoot2 = (-b - Math.sqrt(discriminant) ) / (2 * a);
+    arr.push( (- b + Math.sqrt(discriminant)) / (2 * a), (- b - Math.sqrt(discriminant)) / (2 * a));
   } else if (discriminant === 0) {
-  	discriminantRoot1 = -b / (2 * a);
-  	arr.push (discriminantRoot1);
+  	let discriminantRoot = -b / (2 * a);
+  	arr.push (discriminantRoot);
   } 
 
   return arr; // array
