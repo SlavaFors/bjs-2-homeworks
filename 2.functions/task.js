@@ -1,7 +1,7 @@
 // Задание 1
 function getArrayParams(arr) {
   let min, max, sum, avg;
-  min = 100;
+  min = +100;
   max = -100;
   sum = 0;
  
@@ -16,7 +16,7 @@ function getArrayParams(arr) {
 
     sum += arr[i];
   
-    avg = +((sum / Number(arr.length)).toFixed(2));
+    avg = +((sum / arr.length).toFixed(2));
   } 
 
   return { min: min, max: max, avg: avg };
@@ -38,11 +38,10 @@ function makeWork(arrOfArr, func) { //makeWork(arrOfArr,func) - это мясо�
   let max = 0;
    
     for (let i = 0; i < arrOfArr.length; i += 1) {
-      func(arrOfArr[i]);
-
-          if (func(arrOfArr[i]) > max) {
-            max = func(arrOfArr[i]);
-          }
+    const funcResult = func(arrOfArr[i]);
+      if (funcResult > max) {
+        max = funcResult;
+      }
   }
   return max;
 }
@@ -64,7 +63,8 @@ function worker2(arr) {
       max = arr[i];
     }
   }
-  return diff = Math.abs(max - min);
+  diff = Math.abs(max - min);
+  return diff;
 
 }
 
