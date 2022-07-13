@@ -95,7 +95,7 @@ class DetectiveBook extends Book {
 }
 
 /*ЗАДАЧА 2*/
-class Library (name) {
+class Library {
 	constructor (name) {
 		this.name = name;
 		this.books = [];
